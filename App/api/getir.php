@@ -32,4 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     echo json_encode($result, JSON_UNESCAPED_UNICODE);
+}else{
+    echo json_encode(['Sadece POST metodu ile işlem yapabilirsiniz.'], JSON_UNESCAPED_UNICODE);
 }
