@@ -10,6 +10,10 @@ require_once __DIR__ . '/../Core/includes.php';
 
 $uye = json_decode(file_get_contents('php://input'));
 
+if (!$uye){
+    echo json_encode(['lutfen post metodu uygulayiniz.']);
+    die();
+}
 // Post edilen json verisinden verileri değişkene ata
 $eposta = $uye->{'eposta'};
 $sifre  = $uye->{'sifre'};
